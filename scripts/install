@@ -98,7 +98,7 @@ ynh_system_user_create "$app"
 #=================================================
 
 # install nodejs
-ynh_install_nodejs 8
+ynh_install_nodejs 10
 
 #=================================================
 # Install weboob with pip
