@@ -121,7 +121,7 @@ virtualenv --system-site-packages "${final_path}/venv"
 ynh_use_nodejs
 (
 	chown -R "$app": "$final_path"
-	npm install --production --unsafe-perm "$app@nightly" --prefix "$final_path"
+	npm install --production --unsafe-perm --prefix "$final_path" "$app@nightly" 
 )
 
 #=================================================
