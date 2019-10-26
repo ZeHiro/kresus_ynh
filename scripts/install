@@ -104,7 +104,7 @@ ynh_install_nodejs 10
 # Install weboob with pip
 #=================================================
 
-virtualenv --system-site-packages "${final_path}/venv"
+virtualenv -p python3 --system-site-packages "${final_path}/venv"
 (
 	set +o nounset
 	source "${final_path}/venv/bin/activate"
