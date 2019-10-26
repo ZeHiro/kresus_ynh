@@ -59,7 +59,7 @@ ynh_app_setting_set "$app" salt "$salt"
 #=================================================
 
 ynh_install_app_dependencies dh-autoreconf \
-	python-pip python-dev python-lxml python-imaging python-virtualenv
+	python3-pip python3-dev python3-lxml python3-imaging python3-virtualenv
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -110,8 +110,8 @@ virtualenv --system-site-packages "${final_path}/venv"
 	source "${final_path}/venv/bin/activate"
 	set -o nounset
 
-	pip install --upgrade pip
-	pip install weboob html2text simplejson BeautifulSoup PyExecJS
+	pip3 install --upgrade pip3
+	pip3 install weboob html2text simplejson BeautifulSoup PyExecJS
 )
 
 #=================================================
