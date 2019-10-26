@@ -122,7 +122,7 @@ ynh_use_nodejs
 (
 	cd "$final_path"
 	chown -R "$app": "$final_path"
-	npm install --production --unsafe-perm
+	npm install --production --unsafe-perm "$app@nightly"
 )
 
 #=================================================
