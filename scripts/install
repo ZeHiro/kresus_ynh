@@ -69,7 +69,7 @@ ynh_install_app_dependencies dh-autoreconf \
 
 # Download, check integrity, uncompress and patch the source from app.src
 # ynh_setup_source "$final_path"
-mkdir "$final_path/data"
+mkdir -p "$final_path/data"
 
 #=================================================
 # NGINX CONFIGURATION
