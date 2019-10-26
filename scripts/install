@@ -65,10 +65,10 @@ ynh_install_app_dependencies dh-autoreconf \
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 
-ynh_app_setting_set "$app" final_path "$final_path"
+# ynh_app_setting_set "$app" final_path "$final_path"
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source "$final_path"
+# ynh_setup_source "$final_path"
 mkdir "$final_path/data"
 
 #=================================================
@@ -120,9 +120,8 @@ virtualenv --system-site-packages "${final_path}/venv"
 
 ynh_use_nodejs
 (
-	cd "$final_path"
 	chown -R "$app": "$final_path"
-	npm install --production --unsafe-perm "$app@nightly"
+	npm install --production --unsafe-perm "$app@nightly" --prefix "$final_path"
 )
 
 #=================================================
